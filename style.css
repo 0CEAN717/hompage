@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+   }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+   }
+
 body {
     background-color: lightgray;
 }
@@ -14,10 +22,45 @@ h2 {
     color: rgb(34, 22, 85);
 }
 
-.special-header {
-    color: #21A179;
+.navigation {
+    background-color: #6bf795;
+    padding: 16px;
+    border-radius: 8px;
 }
 
-.header-link {
-    color: rgb(107, 247, 149);
+.navigation__link {
+    color: white;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navigation__link--homepage {
+    background-color: red;
+    color: black;
+}
+
+.week-summary {
+    padding: 16px;
+    border: 1px gray solid;
+    margin-bottom: 10px;
+}
+
+.week-summary--sepcial {
+    border: 1px red solid;
+}
+
+.week-summary__title {
+    color: green;
+}
+
+.week-summary__description {
+    color: red;
+}
+
+.list {
+    list-style: ;
+}
+
+.table {
+    width: 100%;
 }

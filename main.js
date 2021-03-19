@@ -81,9 +81,15 @@ const button = document.querySelector('.action--js');
 
 console.log(button)
 
-const myClick = () => {
- const heading = document.querySelector(".main__heading--js");
- heading.innerHTML = 'Witaj Drogi Odwiedzający, nazywam się Jakub';   
-}
+button.addEventListener('click', () => {
+    const heading = document.querySelector(".main__heading--js");
+    heading.innerHTML = `Witaj Drogi Odwiedzający, nazywam się Jakub`;
+    console.log(heading.classList.contains('main__heading'))
+})
 
-button.addEventListener('click', myClick);
+const hamburger = document.querySelector('.hamburger--js');
+
+hamburger.addEventListener('click', () => {
+    const nav = document.querySelector('.navigation--js');
+    nav.classList.toggle('navigation--open');
+})

@@ -7,11 +7,17 @@ html {
    }
 
 body {
-    background-color: lightgray;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
 }
 
 section {
     background-color: white;
+}
+
+.input:focus {
+    background: burlywood;
 }
 
 h1 {
@@ -22,21 +28,43 @@ h2 {
     color: rgb(34, 22, 85);
 }
 
+.header {
+    background-color: teal;
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .navigation {
-    background-color: #6bf795;
     padding: 16px;
-    border-radius: 8px;
+    display: none;
 }
 
 .navigation__link {
-    color: white;
-    display: inline-block;
-    margin-right: 20px;
+    color: #92140C;
+    display: block;
+    margin: 0 0 16px;
+}
+
+.navigation__link:hover {
+    color: black;
+}
+
+.navigation__link:visited {
+    color: yellow;
+}
+
+.navigation__link:focus {
+    border: 3px solid yellow;
 }
 
 .navigation__link--homepage {
-    background-color: red;
     color: black;
+}
+
+.navigation--open {
+    display: block;
 }
 
 .week-summary {
@@ -45,12 +73,42 @@ h2 {
     margin-bottom: 10px;
 }
 
+.week-summary:hover {
+    background-color: violet;
+}
+
+.week-summary:first-child {
+    background-color: yellow;
+}
+
+.week-summary:last-child {
+    background-color: blue;
+}
+
+.week-summary:not(.week-summary--sepcial) {
+    background-color: grey
+}
+
 .week-summary--sepcial {
     border: 1px red solid;
 }
 
-.week-summary__title {
-    color: green;
+.week-summary__title::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: tomato;
+    border-radius: 50%;
+}
+
+.week-summary__title::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: tomato;
+    border-radius: 50%;
 }
 
 .week-summary__description {
@@ -63,4 +121,81 @@ h2 {
 
 .table {
     width: 100%;
+}
+
+.klasa-z-js {
+    background-color: yellow;
+}
+
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main__heading {
+    color: #92140C;
+}
+
+.about__heading {
+    color: #1460aa;
+}
+
+.about__picture {
+    display: block;
+    max-width: 100%;
+}
+
+.about__link {
+    color: #92140C;
+}
+
+.notes {
+
+}
+
+.notes_heading {
+    color: #1460aa;
+}
+
+.footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer__link {
+    color: #1460aa;
+}
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border: none;
+    background: none;
+}
+
+.grid {
+ 
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 15px;
+    }
+
+    .navigation {
+        padding: 16px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-around;
+        height: 100px;
+        align-items: center;
+    }
+
 }
